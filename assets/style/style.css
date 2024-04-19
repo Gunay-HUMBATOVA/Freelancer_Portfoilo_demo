@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+    font-size: 2.25rem;
+    line-height: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+/* header */
+nav {
+    background-color: #2C3E50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+nav *,
+header {
+    color: white;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.menu {
+    font-weight: 500;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+}
+nav ul li {
+    padding: .5rem 1rem;
+    border-radius: 4px;
+}
+
+nav ul li:hover {
+    color: #1ABC9C;
+    cursor: pointer;
+}
+
+nav ul li.active {
+    background-color: #1ABC9C;
+    color: white;
+}
+
+header {
+    padding: 7rem 3rem 4rem;
+    height: 100vh;
+}
+
+header,
+.about {
+    text-align: center;
+    background-color: #1ABC9C;
+    color: white;
+}
+
+header img {
+    width: 14rem;
+    margin-top: 5%;
+}
+
+header h1 {
+    font-size: 2.75rem;
+}
+
+/* portfoilo */
+.portfoilo {
+    text-align: center;
+}
+
+.portfoilo h2 {
+    margin-bottom: 1rem;
+}
+
+/* common star lines: */
+.star-line {
+    width: 20rem;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.star-line i {
+    font-size: 1.5rem;
+    width: 20rem;
+    margin: auto;
+}
+
+.star-line::after,
+.star-line::before {
+    content: "";
+    width: 8rem;
+    height: 4px;
+    position: absolute;
+    background-color: black;
+    border-radius: 4px;
+    right: 0;
+    top: .5rem;
+}
+
+.star-line::after {
+    left: 0;
+    right: auto;
+}
+
+.star-line.white::after,
+.star-line.white::before {
+    background-color: #fff;
+}
+
+.star-line.white i {
+    color: #fff;
+}
+
+/* common star lines  --end */
+
+.portfoilo-cards>div,
+.portfoilo-cards {
+    display: flex;
+    gap: 1rem;
+}
+
+.portfoilo-cards {
+    flex-direction: column;
+    padding: 0 5%;
+}
+
+.portfoilo-cards .card {
+    width: 100%;
+    height: 15rem;
+    background: url('../img/portfoilo/1.png') center no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.portfoilo-cards .card:nth-child(2) {
+    background-image: url('../img/portfoilo/2.png');
+}
+
+.portfoilo-cards .card:nth-child(3) {
+    background-image: url('../img/portfoilo/3.png');
+}
+
+.portfoilo-cards .bottom .card:nth-child(1) {
+    background-image: url('../img/portfoilo/4.png');
+}
+
+.portfoilo-cards .bottom .card:nth-child(2) {
+    background-image: url('../img/portfoilo/5.png');
+}
+
+.portfoilo-cards .bottom .card:nth-child(3) {
+    background-image: url('../img/portfoilo/6.png');
+}
+
+.portfoilo-cards .card::after {
+    content: "+";
+    line-height: 15rem;
+    vertical-align: middle;
+    font-weight: 900;
+    font-size: 3rem;
+    color: white;
+    background-color: rgba(26, 188, 156, 0.9);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfoilo-cards .card:hover::after {
+    opacity: 1;
+}
+
+/* about */
+.about .content {
+    display: flex;
+    width: 60%;
+    margin: auto;
+    text-align: left;
+    gap: 2rem;
+}
+
+.about button {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 1rem 1.75rem;
+    color: white;
+    margin-top: 5rem;
+    border-radius: 8px;
+}
+
+.about button i {
+    margin-right: 1rem;
+}
+
+/* contact */
+.contact {
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 50rem;
+    margin: auto;
+}
+
+.contact form>div {
+    position: relative;
+}
+
+.contact form input,
+.contact form textarea {
+    border: none;
+    outline: none;
+    border-bottom: 0.125rem solid #ced4da;
+    padding: 2rem 0;
+    resize: vertical;
+    width: 50rem;
+}
+
+.contact form input:focus+label,
+.contact form textarea:focus+label {
+    top: 0;
+    font-size: .9rem;
+}
+
+.contact form label {
+    font-size: 1.5rem;
+    color: #6c757d;
+    font-weight: 500;
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    z-index: 2;
+    transition: all .2s linear;
+}
+
+.contact form>button {
+    padding: 1rem 1.75rem;
+    background-color: #1ABC9C;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    width: fit-content;
+}
+
+/* footer */
+footer {
+    color: white;
+    text-align: center;
+    background-color: #2c3e50;
+    padding: 5rem 0 0;
+}
+
+footer p {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+
+footer .top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 3rem;
+}
+
+footer .top>div {
+    width: 280px;
+}
+
+footer .top a {
+    color: #1ABC9C;
+    text-decoration: underline;
+}
+
+footer .bottom {
+    background-color: #1a252f;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer .social_media_accounts-icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+footer .social_media_accounts-icons div {
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    border: 1px solid white;
+    border-radius: 50%;
+}
